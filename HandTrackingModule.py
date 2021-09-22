@@ -69,7 +69,7 @@ class handDetector():
                 fingers.append(0)
         return fingers
 
-    def findDistance(self,p1, p2, img, draw=True):
+    def findDistance(self, p1, p2, img, draw=True):
         x1, y1 = self.lmList[p1][1], self.lmList[p1][2]
         x2, y2 = self.lmList[p2][1], self.lmList[p2][2]
         cx, cy = (x1 + x2) // 2, (y1 + y2) // 2
@@ -92,8 +92,11 @@ def main():
         success, img = cap.read()
         img = detector.findHands(img)
         lmList = detector.findPosition(img)
-        if len(lmList) != 0:
-            print(lmList[4])
+        try:
+            if len(lmList) != 0:
+                print(lmList)
+        except:
+            pass
 
         cTime = time.time()
         fps = 1 / (cTime - pTime)
