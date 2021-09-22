@@ -22,7 +22,7 @@ cap.set(WIDTH, WCAM)
 
 while True:
     success, img = cap.read()
-    img = detector.findHands(img)
+    img = detector.findHands(img, draw=False)
     lmList, bbox = detector.findPosition(img)
     cv2.rectangle(img, (FRAME_REDUCTION, FRAME_REDUCTION),
                   (WCAM - FRAME_REDUCTION, HCAM - FRAME_REDUCTION), (255, 0, 255), 2)
