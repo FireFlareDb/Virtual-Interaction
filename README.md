@@ -1,5 +1,7 @@
 # Virtual Interaction Time Pass
 
+![](static/vr.gif)
+
 ## Prerequisites For Smooth Performance :
 1. Python Version Above 3.6
 2. Decent CPU OR GPU
